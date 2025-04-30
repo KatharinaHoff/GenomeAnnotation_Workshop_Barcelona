@@ -980,12 +980,12 @@ X3	AUGUSTUS	start_codon	70708	70710	.	+	0	transcript_id "g62.t1"; gene_id "g62";
 X3	AUGUSTUS	CDS	70708	72069	1	+	0	transcript_id "g62.t1"; gene_id "g62";
 X3	AUGUSTUS	exon	70708	72069	.	+	.	transcript_id "g62.t1"; gene_id "g62";
 X3	AUGUSTUS	stop_codon	72067	72069	.	+	0	transcript_id "g62.t1"; gene_id "g62";
-X3	GeneMark.hmm3	gene	73439	74649	.	+	.	g63
-X3	GeneMark.hmm3	transcript	73439	74649	.	+	.	g63.t1
-X3	GeneMark.hmm3	start_codon	73439	73441	.	+	0	transcript_id "g63.t1"; gene_id "g63";
-X3	GeneMark.hmm3	CDS	73439	73634	.	+	0	transcript_id "g63.t1"; gene_id "g63";
-X3	GeneMark.hmm3	exon	73439	73634	.	+	0	transcript_id "g63.t1"; gene_id "g63";
-X3	GeneMark.hmm3	mRNA	73439	74649	.	+	.	transcript_id "g63.t1"; gene_id "g63";
+X3	GeneMark.hmm3	gene	73508	74649	.	+	.	g63
+X3	GeneMark.hmm3	transcript	73508	74649	.	+	.	g63.t1
+X3	GeneMark.hmm3	start_codon	73508	73510	.	+	0	transcript_id "g63.t1"; gene_id "g63";
+X3	GeneMark.hmm3	CDS	73508	73634	.	+	0	transcript_id "g63.t1"; gene_id "g63";
+X3	GeneMark.hmm3	exon	73508	73634	.	+	0	transcript_id "g63.t1"; gene_id "g63";
+X3	GeneMark.hmm3	mRNA	73508	74649	.	+	.	transcript_id "g63.t1"; gene_id "g63";
 X3	GeneMark.hmm3	intron	73635	73739	.	+	1	transcript_id "g63.t1"; gene_id "g63";
 X3	GeneMark.hmm3	CDS	73740	73840	.	+	2	transcript_id "g63.t1"; gene_id "g63";
 X3	GeneMark.hmm3	exon	73740	73840	.	+	2	transcript_id "g63.t1"; gene_id "g63";
@@ -3368,9 +3368,9 @@ X7	GeneMark.hmm3	intron	53966	54242	.	+	0	transcript_id "g176.t2"; gene_id "g176
 X7	GeneMark.hmm3	CDS	54243	54419	.	+	0	transcript_id "g176.t2"; gene_id "g176";
 X7	GeneMark.hmm3	exon	54243	54419	.	+	0	transcript_id "g176.t2"; gene_id "g176";
 X7	GeneMark.hmm3	intron	54420	54495	.	+	0	transcript_id "g176.t2"; gene_id "g176";
-X7	GeneMark.hmm3	CDS	54496	54609	.	+	0	transcript_id "g176.t2"; gene_id "g176";
-X7	GeneMark.hmm3	exon	54496	54609	.	+	0	transcript_id "g176.t2"; gene_id "g176";
-X7	GeneMark.hmm3	intron	54610	54853	.	+	0	transcript_id "g176.t2"; gene_id "g176";
+X7	GeneMark.hmm3	CDS	54496	54630	.	+	0	transcript_id "g176.t2"; gene_id "g176";
+X7	GeneMark.hmm3	exon	54496	54630	.	+	0	transcript_id "g176.t2"; gene_id "g176";
+X7	GeneMark.hmm3	intron	54631	54853	.	+	0	transcript_id "g176.t2"; gene_id "g176";
 X7	GeneMark.hmm3	CDS	54854	54973	.	+	0	transcript_id "g176.t2"; gene_id "g176";
 X7	GeneMark.hmm3	exon	54854	54973	.	+	0	transcript_id "g176.t2"; gene_id "g176";
 X7	GeneMark.hmm3	intron	54974	55052	.	+	0	transcript_id "g176.t2"; gene_id "g176";
