@@ -33,7 +33,7 @@ singularity build genome_annotation.sif docker://katharinahoff/bioinformatics-no
 ```
 ### Obtaining Data
 
-This will require **28 GB** of free space! Let's say $DATA is the location where you want to store all data for this session, you may have to modify that variable:
+This will require **9 GB** of free space! Let's say $DATA is the location where you want to store all data for this session, you may have to modify that variable:
 
 ```
 cd ~
