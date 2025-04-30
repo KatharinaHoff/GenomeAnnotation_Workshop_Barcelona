@@ -67,9 +67,9 @@ This will display 3 links in your terminal. The links will look something like t
 http://127.0.0.1:9002/?token=b4ecdf0c807aad10aaa8fe12e71d9c3d0bf875c16d135527
 ```
 
-Copy one of these links and replace the IP `127.0.0.1` with the IP that you received for this course. Afterwards, paste the modified URL into the address line of your local Chrome browser.
+Copy one of these links and paste it into the address line of your local Chrome browser (e.g. on your notebook).
 
-Click on the folder to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
+Click on the folder `GenomeAnnotation_Workshop_Barcelona` to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
 
 #### A few notes about running code in Jupyter Notebooks:
 
