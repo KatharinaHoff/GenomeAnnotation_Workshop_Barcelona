@@ -24,7 +24,11 @@ Link to wall with tool names: xxx
 
 ## Instructions for Setup in Barcelona (for Particpants)
 
-1. Open a terminal and ssh into your instance
+1. Open a terminal and ssh into your instance with port forwarding:
+
+   `ssh -L 9002:localhost:9002 user@server`
+   
+   Keep this ssh connection open for the entire workshop. If the connection breaks, just reconnect with the same command.
 
 2. In your terminal, in your home (~), make a new directory for the git clone
 
