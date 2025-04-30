@@ -65,25 +65,7 @@ http://127.0.0.1:9002/?token=b4ecdf0c807aad10aaa8fe12e71d9c3d0bf875c16d135527
 
 Copy one of these links and replace the IP `127.0.0.1` with the IP that you received for this course. Afterwards, paste the modified URL into the address line of your local Chrome browser.
 
-
-
-
-
-3. Execute singularity:
-
-```
-singularity exec --cleanenv --bind /home/genomics/workshop_materials/genome_annotation:/home/genomics/workshop_materials/genome_annotation --bind ${PWD}:${PWD} --bind $PWD:/home/jovyan /home/genomics/workshop_materials/genome_annotation/genome_annotation.sif jupyter notebook --no-browser --ip=0.0.0.0 --port=8899
-```
-This will display 3 links in your terminal. The links will look something like this:
-
-```
-http://127.0.0.1:8899/?token=1d5886ad8013bbcaeba6ccaef3dc815e91e17caa696ab596
-```
-Change the IP (127.0.0.1) to your instance address
-
-<img width="1050" alt="Screenshot 2023-05-14 at 12 25 07" src="https://github.com/KatharinaHoff/GenomeAnnotation_Workshop2023/assets/38511308/21e3f2f8-d532-4115-8a59-8527fe2d32cc">
-
-DO NOT CLOSE YOUR TERMINAL! 🖥 It's essential that you keep it open. Click on the folder to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
+Click on the folder to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
 
 #### A few notes about running code in Jupyter Notebooks:
 
