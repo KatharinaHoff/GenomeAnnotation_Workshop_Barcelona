@@ -20,7 +20,7 @@ Link to wall with tool names: xxx
    * practice: merging BRAKER1 and BRAKER2 (or GALBA) gene sets with TSEBRA
    * practice: BUSCO assessment of predicted gene set
    * practice: preparing an assembly hub for the UCSC Genome Browser with MakeHub 
-   * for advanced learners: annotate a chromsome of *Basesia duncani*
+   * for advanced learners: annotate a chromsome of *Babesia duncani*
 
 ## Instructions for Setup in Barcelona (for Particpants)
 
