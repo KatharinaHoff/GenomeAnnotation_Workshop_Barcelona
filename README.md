@@ -32,44 +32,39 @@ Link to wall with tool names: xxx
 
 2. In your terminal, in your home (~), make a new directory for the git clone
 
-```
-cd ~
-git clone https://github.com/KatharinaHoff/GenomeAnnotation_Workshop_Barcelona.git
-```
+    ```
+    cd ~
+    git clone https://github.com/KatharinaHoff/GenomeAnnotation_Workshop_Barcelona.git
+    ```
 
-This will create a folder called `GenomeAnnotation_Workshop_Barcelona` in your home directory. This folder contains the JupyterNotebook for this course (GenomeAnnotation.ipynb) ☺️
+    This will create a folder called `GenomeAnnotation_Workshop_Barcelona` in your home directory. This folder contains the JupyterNotebook for this course (GenomeAnnotation.ipynb) ☺️
 
-### Running Jupyter Server
+3. Run the Jupyter Server: The organizers of the Barcelona Genome Annotation Workshop have already compiled a singularity file called `genome_annotation.sif` for you. You can find this file at `/data/classes/ibe_genann2025/shared_data/hoff_classes/`. With the cloned data and the singularity file (`genome_annotation.sif`), you can run the image for JupyterNotebook display in the terminal. Please start screen before proceeding to ensure that the server will keep running even if you close your terminal window:
 
-The organizers of the Barcelona Genome Annotation Workshop have already compiled a singularity file called `genome_annotation.sif` for you. You can find this file at `/data/classes/ibe_genann2025/shared_data/hoff_classes/`.
+    ```
+    screen
+    ```
+    and hit enter 2x. (Here is a randomly picket tutorial on the general usage of screen: https://linuxize.com/post/how-to-use-linux-screen/ .)
 
-With the cloned data and the singularity file (`genome_annotation.sif`), you can run the image for JupyterNotebook display in the terminal. Please start screen before proceeding to ensure that the server will keep running even if you close your terminal window:
+    Afterwards, in that screen session, execute the following:
 
-```
-screen
-```
-and hit enter 2x. (Here is a randomly picket tutorial on the general usage of screen: https://linuxize.com/post/how-to-use-linux-screen/ .)
+    ```
+    conda activate singularity
+    IMAGE=/data/classes/ibe_genann2025/shared_data/hoff_classes/genome_annotation.sif
+    DATA=/data/classes/ibe_genann2025/shared_data/hoff_classes/GenomeAnnotation_Workshop_Barcelona/DATA
+    cd ~ # just to be sure you are not anywhere else!
+    singularity exec --cleanenv --bind ${DATA}:${DATA} --bind ${PWD}:${PWD} --bind $PWD:/home/jovyan ${IMAGE} jupyter notebook --no-browser --ip=127.0.0.1 --port=9002
+    ```
 
-Afterwards, in that screen session, execute the following:
+    This will display 3 links in your terminal. The links will look something like this:
 
-```
-conda activate singularity
-IMAGE=/data/classes/ibe_genann2025/shared_data/hoff_classes/genome_annotation.sif
-DATA=/data/classes/ibe_genann2025/shared_data/hoff_classes/GenomeAnnotation_Workshop_Barcelona/DATA
-GIT=~/GenomeAnnotation_Workshop_Barcelona
-cd ~ # just to be sure you are not anywhere else!
-singularity exec --cleanenv --bind ${DATA}:${DATA} --bind ${PWD}:${PWD} --bind $PWD:/home/jovyan ${IMAGE} jupyter notebook --no-browser --ip=127.0.0.1 --port=9002
-```
+    ```
+    http://127.0.0.1:9002/?token=b4ecdf0c807aad10aaa8fe12e71d9c3d0bf875c16d135527
+    ```
 
-This will display 3 links in your terminal. The links will look something like this:
+4. Copy one of these links and paste it into the address line of your local Chrome browser (e.g. on your notebook).
 
-```
-http://127.0.0.1:9002/?token=b4ecdf0c807aad10aaa8fe12e71d9c3d0bf875c16d135527
-```
-
-Copy one of these links and paste it into the address line of your local Chrome browser (e.g. on your notebook).
-
-Click on the folder `GenomeAnnotation_Workshop_Barcelona` to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
+5. Click on the folder `GenomeAnnotation_Workshop_Barcelona` to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
 
 #### A few notes about running code in Jupyter Notebooks:
 
@@ -112,6 +107,17 @@ In[ ]
 ```
 
 To create a new code block, you click on "Insert"
+
+#### Ending this Session
+
+Return to your Terminal. If nothing ever happened to your connection, you can see the active Jupyter Server process: press `CTRL+C` and reply `y` to end the server.
+
+If you lost the ssh connection in between and do not see the server process after logging in, again, execute `screen -r` to reattach the screen. If for some reason that screen is still attached, first detatch it, then reattach. Then press `CTRL+C` and reply `y` to end the server.
+
+Exit the screen session with `exit`.
+
+---
+---
 
 ## Obtaining Data
 
