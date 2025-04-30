@@ -1,12 +1,12 @@
-# 2025 Workshop on Genomics, Cesky Krumlov: Genome Annotation
+# 2025 Workshop on Genome Annotation (Barcelona)
 
-This repository contains course materials for a workshop on structural genome annotation with BRAKER, GALBA, and TSEBRA. The course is part of the Workshop on Genomics in Cesky Krumlov, Czech Republic (https://evomics.org/2025-workshop-on-genomics/).
+This repository contains course materials for a workshop on structural genome annotation with BRAKER, GALBA, and TSEBRA.
 
 Authors: Katharina Hoff & Natalia Nenasheva
 
 Contact: katharina.hoff@uni-greifswald.de
 
-Link to wall with tool names: https://uni-greifswald.taskcards.app/#/board/5a8b701b-06a8-4023-8381-1e55d00fca64?token=0ef81721-81ce-4f76-8e23-c1fb4c1f8156
+Link to wall with tool names: xxx
 
 ## Course contents
 
@@ -20,7 +20,7 @@ Link to wall with tool names: https://uni-greifswald.taskcards.app/#/board/5a8b7
    * practice: merging BRAKER1 and BRAKER2 (or GALBA) gene sets with TSEBRA
    * practice: BUSCO assessment of predicted gene set
    * practice: preparing an assembly hub for the UCSC Genome Browser with MakeHub 
-   * for advanced learners: annotate a chromsome of *Basesia duncati*
+   * for advanced learners: annotate a chromsome of *Basesia duncani*
 
 
 ## Cloning the GiHub repository for this workshop
