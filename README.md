@@ -22,8 +22,49 @@ Link to wall with tool names: xxx
    * practice: preparing an assembly hub for the UCSC Genome Browser with MakeHub 
    * for advanced learners: annotate a chromsome of *Basesia duncani*
 
+## Instructions for Local Setup
 
-## Cloning the GiHub repository for this workshop
+### Obtaining the Singularity Image File
+
+If you want to obtain the same image for using it after the course, you can do so as follows (with singularity-ce version 3.11.2, available from https://github.com/sylabs/singularity, find their installation instructions at https://github.com/sylabs/singularity/blob/main/INSTALL.md, make sure you are not using an older version of singularity, as this may cause problems):
+
+```
+singularity build genome_annotation.sif docker://katharinahoff/bioinformatics-notebook
+```
+### Obtaining Data
+
+This will require **9 GB** of free space! Let's say $DATA is the location where you want to store all data for this session, you may have to modify that variable:
+
+```
+cd ~
+git clone https://github.com/KatharinaHoff/GenomeAnnotation_Workshop_Barcelona.git # every workshop participant needs this, can e.g. sit in the home directory
+DATA=/nas-hs/users/katharina/images/data # will require modification!
+cd $DATA
+cp ~/GenomeAnnotation_Workshop_Barcelona/obtain_data.sh .
+bash obtain_data.sh # will take a while, should be stored ahead of time in a location for all participants
+```
+
+### Running Local Jupyter Server
+
+You have to modify the location of the image file `$IMAGE` to your local system. 
+```
+IMAGE=/nas-hs/users/katharina/images/genome_annotation.sif
+DATA=/nas-hs/users/katharina/images/data # will require modification!
+GIT=~/GenomeAnnotation_Workshop_Barcelona # may require modification if not home
+# execute from your user home directory, should not be a group drive
+singularity exec --cleanenv --bind ${GIT}:${PWD} --bind ${DATA}:/home/genomics/workshop_materials/genome_annotation --bind ${PWD}:${PWD} --bind $PWD:/home/jovyan ${IMAGE} jupyter notebook --no-browser --ip=127.0.0.1
+```
+
+This will display 3 links in your terminal. The links will look something like this:
+
+```
+http://127.0.0.1:8899/?token=1d5886ad8013bbcaeba6ccaef3dc815e91e17caa696ab596
+```
+Open one of them in your Chrome browser.
+
+## Instructions for AWS Setup
+
+### Cloning the GitHub repository for this workshop
 
 1. Open a terminal and ssh into your instance
 
@@ -56,7 +97,7 @@ Change the IP (127.0.0.1) to your instance address
 
 DO NOT CLOSE YOUR TERMINAL! 🖥 It's essential that you keep it open. Click on the folder to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
 
-### A few notes about running code in Jupyter Notebooks:
+#### A few notes about running code in Jupyter Notebooks:
 
 You can run code by clicking "Run" at the top of the screen
 
@@ -98,41 +139,7 @@ In[ ]
 
 To create a new code block, you click on "Insert"
 
-
-## If you want to run this course after the Workshop on Genomics
-
-### Obtaining the Singularity Image File
-
-If you want to obtain the same image for using it after the course, you can do so as follows (with singularity-ce version 3.11.2, available from https://github.com/sylabs/singularity, find their installation instructions at https://github.com/sylabs/singularity/blob/main/INSTALL.md, make sure you are not using an older version of singularity, as this may cause problems):
-
-```
-singularity build genome_annotation.sif docker://katharinahoff/bioinformatics-notebook
-```
-
-```
-# execute from your user home directory, should not be a group drive
-singularity exec --cleanenv --bind /home/genomics/workshop_materials/genome_annotation:/home/genomics/workshop_materials/genome_annotation --bind ${PWD}:${PWD} --bind $PWD:/home/jovyan /home/genomics/workshop_materials/genome_annotation/genome_annotation.sif jupyter notebook --no-browser --ip=127.0.0.1
-```
-
-The local directory `/home/genomics/workshop_materials` may only be available during the course on site at Cesky Krumlov's AWS instance. If you want to use the image after the course, you may want to remove this directory from the command above (explicitely, remove: `--bind /home/genomics/workshop_materials/genome_annotation:/home/genomics/workshop_materials/genome_annotation`). Also, you of course need to specify the true location of the image, modify the command if it does not reside at `/home/genomics/workshop_materials/genome_annotation/genome_annotation.sif`.
-
-It is vital that you mount `/home/jovyan` to a writable location. Otherwise, you will not be able to save your work. The command above will mount the current working directory to `/home/jovyan`. If you want to mount a different directory, replace `${PWD}` with the path to the directory you want to mount (this corresponds specifically to this part of the command: `--bind ${PWD}:/home/jovyan`).
-
-The flag `--cleanenv` makes sure that other environment variables/tools (e.g. Perl dependencies) installed on the host do not interfere with the image.
-
-This will display a link in your terminal that you may post into your web browser. The link will look something like this:
-
-```
-http://127.0.0.1:8888/?token=4aff4819888e4afd61a63b3015f8a1f816deea84efe2cd3f
-```
-
-In pratice, I recommend that you do not continue to work with the workshop container but use the native BRAKER or Galba containers, instead. These tools are distributed separately, and the native containers may contain updates that help you.
-
-### Data sets
-
-If you want to execute the JupyterNotebooks, you will need data. At the Cesky Krumlov Workshop, these datasets have already been prepared for you at /home/genomics/workshop_materials/genome_annotation. If you want to use the JupyterNotebook after the course, you will need to download the data sets to your local device. Simply execute [obtain_data.sh](obtain_data.sh) in your terminal (e.g. `bash obtain_data.sh`). This will require **28 GB** of free space!
-
-### Moving from JupyterLab to SLURM
+## Moving from JupyterLab to SLURM
 
 The exact same container that is used for rendering our teaching materials with JupyterLab can be used on any HPC (that has singularity support) with a SLURM scheduler. In this case, you will not execute JupyterLab, but submit a task with SLURM for computation. Example for calling BRAKER3 with SLURM:
 
