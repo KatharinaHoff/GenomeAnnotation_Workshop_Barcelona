@@ -1,4 +1,4 @@
-# 2025 Workshop on Genome Annotation (Barcelona)
+# AGCTually Annotating Genomes Tuesday Materials (Barcelona 2025)
 
 This repository contains course materials for a workshop on structural genome annotation with BRAKER, GALBA, and TSEBRA.
 
