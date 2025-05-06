@@ -28,7 +28,8 @@ Link to wall with tool names: xxx
 
    ```
    PORT=1234 # use your port!
-   ssh -L ${PORT}:localhost:${PORT} user@server```
+   ssh -L ${PORT}:localhost:${PORT} user@server
+   ```
    
    Keep this ssh connection open for the entire workshop. If the connection breaks, just reconnect with the same command.
 
