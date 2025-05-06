@@ -24,13 +24,15 @@ Link to wall with tool names: xxx
 
 ## Instructions for Setup in Barcelona (for Particpants)
 
-1. Open a terminal and ssh into your instance with port forwarding:
+1. Open a terminal and ssh into your instance with port forwarding using the individual port assigned to you, here stored in `${PORT}`:
 
-   `ssh -L 9002:localhost:9002 user@server`
+   ```
+   PORT=1234 # use your port!
+   ssh -L ${PORT}:localhost:${PORT} user@server```
    
    Keep this ssh connection open for the entire workshop. If the connection breaks, just reconnect with the same command.
 
-2. In your terminal, in your home (~), make a new directory for the git clone
+3. In your terminal, in your home (~), make a new directory for the git clone
 
     ```
     cd ~
@@ -39,7 +41,7 @@ Link to wall with tool names: xxx
 
     This will create a folder called `GenomeAnnotation_Workshop_Barcelona` in your home directory. This folder contains the JupyterNotebook for this course (GenomeAnnotation.ipynb) ☺️
 
-3. Run the Jupyter Server: The organizers of the Barcelona Genome Annotation Workshop have already compiled a singularity file called `genome_annotation.sif` for you. You can find this file at `/data/classes/ibe_genann2025/shared_data/hoff_classes/`. With the cloned data and the singularity file (`genome_annotation.sif`), you can run the image for JupyterNotebook display in the terminal. Please start screen before proceeding to ensure that the server will keep running even if you close your terminal window:
+4. Run the Jupyter Server: The organizers of the Barcelona Genome Annotation Workshop have already compiled a singularity file called `genome_annotation.sif` for you. You can find this file at `/data/classes/ibe_genann2025/shared_data/hoff_classes/`. With the cloned data and the singularity file (`genome_annotation.sif`), you can run the image for JupyterNotebook display in the terminal. Please start screen before proceeding to ensure that the server will keep running even if you close your terminal window:
 
     ```
     screen
@@ -62,9 +64,9 @@ Link to wall with tool names: xxx
     http://127.0.0.1:9002/?token=b4ecdf0c807aad10aaa8fe12e71d9c3d0bf875c16d135527
     ```
 
-4. Copy one of these links and paste it into the address line of your local Chrome browser (e.g. on your notebook).
+5. Copy one of these links and paste it into the address line of your local Chrome browser (e.g. on your notebook).
 
-5. Click on the folder `GenomeAnnotation_Workshop_Barcelona` to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
+6. Click on the folder `GenomeAnnotation_Workshop_Barcelona` to access the workshop content. Double click to open the GenomeAnnotation.ipynb. Welcome to the starting point of this lab 🤓
 
 #### A few notes about running code in Jupyter Notebooks:
 
